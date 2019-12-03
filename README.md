@@ -5,6 +5,6 @@ Created using Laravel
 
 Features:
 
-Add/Edit Company
-Upload Documents to Google Drive
-View Documents
+* Add/Edit Company
+* Upload Documents to Google Drive
+* View Documents
