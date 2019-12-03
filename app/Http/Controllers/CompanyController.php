@@ -57,21 +57,7 @@ class CompanyController extends Controller {
 					"data" => $data
 				   ];
 		}
-		else {
-			/*
-			set_time_limit(0);
-			Companies::where("COMPANY_ID","<>",28)->where("COMPANY_ID", "=", 15)->get()->each(function($row){
-				$data = DB::table("folders")->where("COMPANY_ID", 28)->where("PARENT_ID",0)->get();
-				$data->each(function($folder) use ($row){
- 					$newFolder = new Folder();
-					$newFolder->COMPANY_ID = $row->COMPANY_ID;
-					$newFolder->FOLDER_NAME = $folder->FOLDER_NAME;
-					$newFolder->PARENT_ID = 0;
-					$newFolder->save();
-					Folder::copy($folder->FOLDER_ID, $newFolder->FOLDER_ID);
-				});
-			});
-			*/
+		else {			
 			return view ("companies.index");
 		}
 	}
