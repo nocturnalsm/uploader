@@ -29,21 +29,22 @@ class AddCompanyField extends Migration
             $table->string("EFIN")->default("");
             $table->string("EMAIL_DJP")->default("");
             $table->string("PASSWORD_DJP")->default("");
+            $table->string("AKTIF", 1)->default("Y");
         });
         Schema::create('direktur', function(Blueprint $table)
-		{
+    		{
             $table->increments('DIREKTUR_ID');
             $table->integer("COMPANY_ID")->index();
-			$table->string('NAMA')->default("");
-			$table->string('NPWP', 20)->default("");
-        });
+      			$table->string('NAMA')->default("");
+      			$table->string('NPWP', 20)->default("");
+            });
         Schema::create('komisaris', function(Blueprint $table)
-		{
+    		{
             $table->increments('KOMISARIS_ID');
             $table->integer("COMPANY_ID")->index();
-			$table->string('NAMA')->default("");
-			$table->string('NPWP', 20)->default("");
-		});
+      			$table->string('NAMA')->default("");
+      			$table->string('NPWP', 20)->default("");
+    		});
     }
 
     /**
